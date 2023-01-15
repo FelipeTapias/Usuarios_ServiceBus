@@ -1,10 +1,8 @@
-﻿using Azure.Core;
-using Azure.Messaging.ServiceBus;
+﻿using Azure.Messaging.ServiceBus;
 using Domain.Model.Entities;
 using Domain.Model.Interfaces;
 using Helpers.ObjectUtils;
 using Microsoft.Extensions.Options;
-using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
 
