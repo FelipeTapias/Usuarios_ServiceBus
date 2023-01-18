@@ -8,18 +8,17 @@ namespace Usuarios_ServiceBus.Controllers
     [ApiController]
     public class UsuarioController: ControllerBase
     {
-        private readonly IAppServiceBus _appServiceBus;
+        private readonly IUsuarioUseCase _usuario;
 
-        public UsuarioController(IAppServiceBus appServiceBus)
+        public UsuarioController(IUsuarioUseCase usuario)
         {
-            _appServiceBus = appServiceBus;
+            _usuario = usuario;
         }
 
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] Usuario usuario)
         {
-            await _appServiceBus.SendMessage(usuario);
-            return Ok();
+            return Ok(await _usuario.CreateSendMessage(usuario));
         }
 
         //[HttpGet]
@@ -31,12 +30,12 @@ namespace Usuarios_ServiceBus.Controllers
         //    };
         //}
 
-        [HttpGet]
-        public async Task<ActionResult> Get()
-        {
-            await _appServiceBus.RecieveMessage();
-            return Ok();
-        }
+        //[HttpGet]
+        //public async Task<ActionResult> Get()
+        //{
+        //    await _appServiceBus.RecieveMessage();
+        //    return Ok();
+        //}
 
     }
 }

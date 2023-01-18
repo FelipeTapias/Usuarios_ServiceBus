@@ -18,7 +18,7 @@ namespace DrivenAdapters.ServiceBus
             _options = options;
         }
 
-        public async Task SendMessage(Usuario usuario)
+        public async Task<bool> SendMessage(Usuario usuario)
         {
             ServiceBusClientOptions clientOptions = new()
             {
@@ -32,6 +32,7 @@ namespace DrivenAdapters.ServiceBus
             try
             {
                 await sender.SendMessagesAsync(messageBatch);
+                return true;
             }
             finally
             {
@@ -50,7 +51,6 @@ namespace DrivenAdapters.ServiceBus
             ServiceBusProcessor sender = client.CreateProcessor(_options.CurrentValue.QueueName);
             sender.ProcessMessageAsync += MessageHandler;
             sender.ProcessErrorAsync += ErrorHandler;
-
                 await sender.StartProcessingAsync();      
         }
 
