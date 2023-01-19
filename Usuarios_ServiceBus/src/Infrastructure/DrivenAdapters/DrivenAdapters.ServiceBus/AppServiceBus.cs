@@ -18,7 +18,7 @@ namespace DrivenAdapters.ServiceBus
             _options = options;
         }
 
-        public async Task<bool> SendMessage(Usuario usuario)
+        public async Task<bool> SendMessage(UsuarioRequest usuario)
         {
             ServiceBusClientOptions clientOptions = new()
             {
@@ -56,11 +56,11 @@ namespace DrivenAdapters.ServiceBus
 
         async Task MessageHandler(ProcessMessageEventArgs args)
         {
-            Usuario usuario;
+            UsuarioRequest usuario;
             string body = args.Message.Body.ToString();
             if (!string.IsNullOrEmpty(body))
             {
-                usuario = JsonSerializer.Deserialize<Usuario>(body);
+                usuario = JsonSerializer.Deserialize<UsuarioRequest>(body);
                 Console.WriteLine(usuario.Nombre);
             }
             await args.CompleteMessageAsync(args.Message);
@@ -68,7 +68,7 @@ namespace DrivenAdapters.ServiceBus
 
         // handle any errors when receiving messages
         Task ErrorHandler(ProcessErrorEventArgs args)
-        {
+        { 
             Console.WriteLine(args.Exception.ToString());
             return Task.CompletedTask;
         }

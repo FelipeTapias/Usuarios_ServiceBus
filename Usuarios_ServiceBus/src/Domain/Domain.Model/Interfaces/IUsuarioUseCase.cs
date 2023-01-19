@@ -4,8 +4,10 @@ namespace Domain.Model.Interfaces
 {
     public interface IUsuarioUseCase
     {
-        Task<string> CreateSendMessage(Usuario usuario);
+        Task<string> CreateSendMessage(UsuarioRequest usuario);
 
         Task CreateRecieveMessage();
+
+        Task<List<UsuarioRequest>> GetAllUsers();
     }
 }

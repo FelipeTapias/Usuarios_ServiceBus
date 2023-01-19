@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DrivenAdapters.Sql.Context;
+﻿namespace DrivenAdapters.Sql.Context;
 
 public partial class Apartamento
 {

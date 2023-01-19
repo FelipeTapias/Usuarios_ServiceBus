@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
       <PrivateAssets>all</PrivateAssets>
@@ -24,11 +25,8 @@
     <ProjectReference Include="..\..\Domain\Domain.UseCase\Domain.UseCase.csproj" />
     <ProjectReference Include="..\..\Infrastructure\DrivenAdapters\DrivenAdapters.ServiceBus\DrivenAdapters.ServiceBus.csproj" />
     <ProjectReference Include="..\..\Infrastructure\DrivenAdapters\DrivenAdapters.Sql\DrivenAdapters.Sql.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\EntryPoints\EntryPoints.ReactiveWeb\EntryPoints.ReactiveWeb.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Helpers\Helpers.ObjectUtils\Helpers.ObjectUtils.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="AutoMapper\" />
   </ItemGroup>
 
 </Project>

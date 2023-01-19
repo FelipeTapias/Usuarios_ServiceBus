@@ -11,7 +11,7 @@ namespace Domain.Model.Interfaces
         /// Task SendMessage
         /// </summary>
         /// <param name="usuario"></param>
-        Task<bool> SendMessage(Usuario usuario);
+        Task<bool> SendMessage(UsuarioRequest usuario);
 
         /// <summary>
         /// Task RecieveMessage

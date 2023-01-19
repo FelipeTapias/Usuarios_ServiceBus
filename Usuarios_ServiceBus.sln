@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrivenAdapters.ServiceBus",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrivenAdapters.Sql", "Usuarios_ServiceBus\src\Infrastructure\DrivenAdapters\DrivenAdapters.Sql\DrivenAdapters.Sql.csproj", "{2E10F63C-33DE-4337-A87C-E5C98FFCC89D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryPoints.ReactiveWeb", "Usuarios_ServiceBus\src\Infrastructure\EntryPoints\EntryPoints.ReactiveWeb\EntryPoints.ReactiveWeb.csproj", "{106D3F00-ACA2-4648-BA20-837742971DA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{2E10F63C-33DE-4337-A87C-E5C98FFCC89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E10F63C-33DE-4337-A87C-E5C98FFCC89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E10F63C-33DE-4337-A87C-E5C98FFCC89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106D3F00-ACA2-4648-BA20-837742971DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106D3F00-ACA2-4648-BA20-837742971DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106D3F00-ACA2-4648-BA20-837742971DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106D3F00-ACA2-4648-BA20-837742971DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{4A88EF8C-7A3E-4957-A4DC-651D0C7ABB2C} = {9665F279-87D9-4D4D-9CE4-DA7B812B6A72}
 		{5A77FD9B-5596-4521-B2E9-F333A1995B47} = {0EA2A59D-20FA-4587-A2E9-FF51B53D1E0C}
 		{2E10F63C-33DE-4337-A87C-E5C98FFCC89D} = {0EA2A59D-20FA-4587-A2E9-FF51B53D1E0C}
+		{106D3F00-ACA2-4648-BA20-837742971DA6} = {764C20E1-9E25-4A2D-BD5A-E44A90218105}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA6D919A-B819-412C-A1DC-BB15B41F98D4}
