@@ -9,8 +9,8 @@ namespace Usuarios_ServiceBus.AutoMapper
         public UsuariosProfiles()
         {
             CreateMap<Usuario, UsuarioRequest>().ForMember(x => x.ApartamentoRequest, x => x.MapFrom(x => x.IdApartamentoNavigation));
-            CreateMap<Apartamento, ApartamentoRequest>();
+            CreateMap<Apartamento, ApartamentoResponse>();
+            CreateMap<ApartamentoRequest, Apartamento>();
         }
-
     }
 }

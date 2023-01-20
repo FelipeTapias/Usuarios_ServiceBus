@@ -35,5 +35,6 @@ namespace Domain.UseCase
         {
             return await _usuarioAdapter.GetAllUser();
         }
+
     }
 }
